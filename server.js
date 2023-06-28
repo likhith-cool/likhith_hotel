@@ -15,11 +15,11 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
-app.use(express.static(path.join(__dirname + "./frontend/build")));
+// app.use(express.static(path.join(__dirname + "./frontend/build")));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./frontend/build/index.html"));
-})
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "./frontend/build/index.html"));
+// })
 app.listen(port, () => {
     console.log(`Server started at port:${port}`);
 })
